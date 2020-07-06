@@ -24,4 +24,9 @@ printf "\n"
 echo "Computing a*b+c"
 secondComputation=$(echo "scale=2;$a*$b+$c/1" |bc )
 echo "SecondComputation Result is : "$secondComputation
+printf "\n"
 
+echo "Computing c+a/b"
+thirdComputation=$(echo "scale=2;$c+$a/$b/1" |bc )
+echo "ThirdComputation Result is : "$thirdComputation
+printf "\n"
