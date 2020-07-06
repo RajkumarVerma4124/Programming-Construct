@@ -35,3 +35,15 @@ echo "Computing a%b+c"
 fourthComputation=$(echo "scale=2;$a%$b+$c/1" |bc )
 echo "FourthComputation Result is : "$fourthComputation
 printf "\n"
+
+
+echo "Storing the results in a Dictionary for every Computation"
+
+declare -A operations
+operations[1]=$firstComputation
+operations[2]=$secondComputation
+operations[3]=$thirdComputation
+operations[4]=$fourthComputation
+
+echo "Dictionary Results are : "${operations[@]}
+printf "\n"
