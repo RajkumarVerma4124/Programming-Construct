@@ -15,3 +15,8 @@ printf "\n"
 read -p "Enter The Third Number : " c
 echo "Your Third number is : "$c
 printf "\n"
+
+echo "Computing a+b*c"
+printf "\n"
+firstComputation=$(echo "scale=2;$a+$b*$c/1" | bc )
+echo "FirstComputation Result is : "$firstComputation
