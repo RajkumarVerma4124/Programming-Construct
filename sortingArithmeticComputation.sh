@@ -22,17 +22,17 @@ echo "FirstComputation Result is : "$firstComputation
 printf "\n"
 
 echo "Computing a*b+c"
-secondComputation=$(echo "scale=2;$a*$b+$c/1" |bc )
+secondComputation=$(echo "scale=2;$a*$b+$c/1" | bc )
 echo "SecondComputation Result is : "$secondComputation
 printf "\n"
 
 echo "Computing c+a/b"
-thirdComputation=$(echo "scale=2;$c+$a/$b/1" |bc )
+thirdComputation=$(echo "scale=2;$c+$a/$b/1" | bc )
 echo "ThirdComputation Result is : "$thirdComputation
 printf "\n"
 
 echo "Computing a%b+c"
-fourthComputation=$(echo "scale=2;$a%$b+$c/1" |bc )
+fourthComputation=$(echo "scale=2;$a%$b+$c/1" | bc )
 echo "FourthComputation Result is : "$fourthComputation
 printf "\n"
 
@@ -46,4 +46,14 @@ operations[3]=$thirdComputation
 operations[4]=$fourthComputation
 
 echo "Dictionary Results are : "${operations[@]}
+printf "\n"
+
+echo "Reading the values from the Dictionary into the array for every Computation"
+
+for i in {1..4}
+do
+	operationsArr[$i]=${operations[$i]}
+done
+
+echo "Array Results are : "${operationsArr[*]}
 printf "\n"
