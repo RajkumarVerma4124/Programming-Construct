@@ -30,3 +30,8 @@ echo "Computing c+a/b"
 thirdComputation=$(echo "scale=2;$c+$a/$b/1" |bc )
 echo "ThirdComputation Result is : "$thirdComputation
 printf "\n"
+
+echo "Computing a%b+c"
+fourthComputation=$(echo "scale=2;$a%$b+$c/1" |bc )
+echo "FourthComputation Result is : "$fourthComputation
+printf "\n"
