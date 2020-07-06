@@ -57,3 +57,25 @@ done
 
 echo "Array Results are : "${operationsArr[*]}
 printf "\n"
+
+echo "Sort the results to show the Computation Result in the Descending Order"
+
+descendingSort(){
+n=5
+for((i=1;i<n;i++))
+do
+	for((j=1;j<n;j++))
+	do
+		if [ 1 -eq " $(echo "${operationsArr[$i]} > ${operationsArr[$j]}" | bc )" ]
+		then
+			temp=${operationsArr[$i]}
+			operationsArr[$i]=${operationsArr[$j]}
+			operationsArr[$j]=$temp
+		fi
+	done
+done
+}
+
+descendingSort
+echo "RESULT IN DESCENDING ORDER ARE : "${operationsArr[*]}
+printf "\n"
